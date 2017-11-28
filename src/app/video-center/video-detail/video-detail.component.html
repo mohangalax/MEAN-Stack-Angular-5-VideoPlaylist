@@ -1,0 +1,14 @@
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe width="75%" height="250" class="embed-responsive-item" [src]="video.url | safe" allowfullscreen></iframe>
+</div>
+
+<form>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Title" required name="title" [(ngModel)]="video.title">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Description" required name="description" [(ngModel)]="video.description">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="updateVideoDetail()">Update</button>
+    <button type="button" class="btn btn-danger" (click)="deleteVideoDetail()">Delete</button>
+</form>
